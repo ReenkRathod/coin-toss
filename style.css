@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.coin {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 2rem auto;
+    transform-style: preserve-3d;
+    transition: transform 3s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+.coin div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #daa520;
+}
+
+.coin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tails {
+    transform: rotateY(180deg);
+}
+
+.controls {
+    margin-top: 2rem;
+}
+
+#flip-button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #daa520;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#flip-button:hover {
+    background-color: #b8860b;
+}
+
+#flip-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#status {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+}
